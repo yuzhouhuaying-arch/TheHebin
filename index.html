@@ -3,132 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEBIN | Global Leader in Yoga & Pilates Manufacturing</title>
+    <title>HEBIN | Global Yoga & Pilates Manufacturing | Product Catalog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --tech-blue: #1e3a8a; 
-            --platinum: #f8f8f8;
-            --charcoal: #111111;
-        }
+        :root { --tech-blue: #1e3a8a; --platinum: #f7f7f7; --charcoal: #111111; }
         body { font-family: 'Inter', sans-serif; background-color: var(--platinum); color: var(--charcoal); }
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
-        .nav-link { letter-spacing: 0.25em; font-size: 0.7rem; text-transform: uppercase; }
-        .hero-title { line-height: 1.1; letter-spacing: -0.02em; }
-        .section-fade-in { animation: fadeIn 1.5s ease-out forwards; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .img-hover { transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
-        .img-hover:hover { transform: scale(1.02); }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+        .catalog-img { transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .catalog-card:hover .catalog-img { transform: scale(1.05); }
+        .nav-link { letter-spacing: 0.25em; font-size: 0.65rem; text-transform: uppercase; }
     </style>
 </head>
-<body class="antialiased">
-    <nav class="fixed w-full z-50 bg-white/40 backdrop-blur-2xl border-b border-gray-100 px-10 py-7 flex justify-between items-center">
+<body class="antialiased scroll-smooth">
+    <header class="fixed w-full z-50 bg-white/40 backdrop-blur-xl border-b border-gray-100 px-10 py-6 flex justify-between items-center">
         <div class="text-3xl font-light tracking-[0.4em]">HEBIN</div>
-        <div class="hidden lg:flex space-x-16">
-            <a href="#vision" class="nav-link hover:opacity-50 transition">Vision</a>
-            <a href="#innovation" class="nav-link hover:opacity-50 transition">Innovation</a>
-            <a href="#craft" class="nav-link hover:opacity-50 transition">The Craft</a>
-            <a href="#contact" class="nav-link hover:opacity-50 transition">Inquiry</a>
+        <div class="hidden lg:flex space-x-12">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#catalog" class="nav-link">Catalog</a>
+            <a href="#innovation" class="nav-link">R&D</a>
+            <a href="#factory" class="nav-link">Factory</a>
         </div>
-        <a href="https://hebin.en.alibaba.com" target="_blank" class="border border-black px-8 py-3 text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition duration-500">Global Shop</a>
-    </nav>
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="https://sc02.alicdn.com/kf/A10180f19a4b54344b2e1349dbfe506fa4.png" class="absolute inset-0 w-full h-full object-cover" alt="Hebin Philosophy">
+        <a href="https://hebin.en.alibaba.com" target="_blank" class="bg-black text-white px-8 py-3 text-[10px] uppercase tracking-widest hover:opacity-80 transition duration-500">Shop Wholesale</a>
+    </header>
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://sc02.alicdn.com/kf/A5895553d49ae4e13bf1a558ff6bdbe164.png" class="absolute inset-0 w-full h-full object-cover" alt="Hero Background">
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative text-center text-white px-6 section-fade-in">
-            <p class="text-[10px] uppercase tracking-[0.5em] mb-8 opacity-80">The Manufacturer's Standard</p>
-            <h1 class="text-7xl md:text-9xl hero-title mb-10">Crafting the Future of<br><span class="italic">Activewear Brands</span></h1>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 mt-12">
-                <a href="https://hebin.en.alibaba.com" target="_blank" class="bg-white text-black px-16 py-5 text-[10px] uppercase tracking-widest hover:bg-gray-100 transition shadow-2xl">Start Your Project</a>
-                <a href="#innovation" class="text-xs uppercase tracking-widest border-b border-white pb-2 hover:opacity-70 transition">R&D Capabilities</a>
-            </div>
+        <div class="relative text-center text-white px-6">
+            <p class="text-[10px] uppercase tracking-[0.6em] mb-8 opacity-80">Global Premium Manufacturing</p>
+            <h1 class="text-7xl md:text-9xl font-light italic leading-tight mb-12">Excellence in Motion</h1>
+            <a href="#catalog" class="border border-white px-12 py-4 text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition duration-500 shadow-2xl">Browse Product Catalog</a>
         </div>
     </section>
-    <section id="vision" class="py-40 px-6 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid lg:grid-cols-2 gap-32 items-center">
-                <div class="order-2 lg:order-1">
-                    <div class="relative overflow-hidden group">
-                        <img src="https://sc02.alicdn.com/kf/Af4c413bfb346482f86e70a51818216283.png" class="img-hover w-full h-auto rounded-sm" alt="Hebin Design Intelligence">
+    <section id="catalog" class="py-40 bg-white">
+        <div class="container mx-auto px-10">
+            <div class="text-center mb-32">
+                <h2 class="text-6xl mb-6">Product Catalog</h2>
+                <p class="text-gray-400 text-[10px] uppercase tracking-[0.4em]">Direct from our manufacturing facility</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="catalog-card relative group cursor-pointer overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Af7b6954a182c42d393706e2d84499c7fG.png" class="catalog-img w-full h-auto aspect-[4/5] object-cover" alt="Seamless Leggings">
+                    <div class="mt-6">
+                        <h3 class="text-xl mb-1">Seamless High-Rise Leggings</h3>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-400">4-Way Stretch | Naked-Feel</p>
                     </div>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <p class="text-blue-900 text-[10px] uppercase tracking-[0.3em] font-semibold mb-6">Market Intelligence</p>
-                    <h2 class="text-6xl mb-12 leading-tight">Data-Driven<br>Aesthetics</h2>
-                    <p class="text-gray-500 font-light text-xl leading-relaxed mb-10">
-                        We don't just manufacture; we predict. By utilizing AI-driven trend forecasting, Hebin identifies upcoming market favorites—such as our <span class="italic">SP26 Tech Blue (PANTONE 2127C)</span>—long before the season begins.
-                    </p>
-                    <p class="text-gray-400 font-light leading-relaxed mb-12">
-                        For B2B partners, this means reduced inventory risk and optimized color-matching efficiency. We align our manufacturing roadmap with global consumer demand.
-                    </p>
-                    <div class="h-px w-32 bg-gray-200"></div>
+                <div class="catalog-card relative group cursor-pointer overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Ab9b11e08558141fa92c06b8252f559b0C.png" class="catalog-img w-full h-auto aspect-[4/5] object-cover" alt="Sports Bras">
+                    <div class="mt-6">
+                        <h3 class="text-xl mb-1">Elite Performance Bras</h3>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-400">High Support | Quick-Dry</p>
+                    </div>
                 </div>
+                <div class="catalog-card relative group cursor-pointer overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/A50cc274207594c89afa4c9c034a968e4B.png" class="catalog-img w-full h-auto aspect-[4/5] object-cover" alt="Matching Sets">
+                    <div class="mt-6">
+                        <h3 class="text-xl mb-1">Curated Matching Sets</h3>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-400">Trend Blue (2127C) | Signature Series</p>
+                    </div>
+                </div>
+                <div class="catalog-card relative group cursor-pointer overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/A8842cf110dd341ab9bb6b0b8d132f309M.png" class="catalog-img w-full h-auto aspect-[4/5] object-cover" alt="Pilates Essentials">
+                    <div class="mt-6">
+                        <h3 class="text-xl mb-1">Professional Pilates Gear</h3>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-400">Custom ODM | Studio Ready</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-24 text-center">
+                <a href="https://hebin.en.alibaba.com" target="_blank" class="border border-black px-20 py-6 text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition">Inquire for Bulk Wholesale</a>
             </div>
         </div>
     </section>
     <section id="innovation" class="py-40 bg-[#111111] text-white">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="grid lg:grid-cols-2 gap-32 items-center">
-                <div>
-                    <p class="text-gray-500 text-[10px] uppercase tracking-[0.3em] mb-6">Fabric Lab</p>
-                    <h2 class="text-6xl mb-12 leading-tight">Engineering<br><span class="italic text-gray-400">Superior Feel</span></h2>
-                    <p class="text-gray-300 font-light text-xl leading-relaxed mb-12">
-                        Our proprietary textile blends offer the perfect balance of "Buttery-Soft" comfort and high-compression support. Tested for 4-way stretch and extreme breathability.
-                    </p>
-                    <div class="grid grid-cols-2 gap-12">
-                        <div>
-                            <div class="text-3xl font-light mb-2">95%</div>
-                            <div class="text-[9px] uppercase tracking-widest text-gray-500">Client Conversion Lift</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-light mb-2">300+</div>
-                            <div class="text-[9px] uppercase tracking-widest text-gray-500">Global Label Partners</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://sc02.alicdn.com/kf/A380eacfe8a5a44c9bd616dfe25e55762K.png" class="rounded-sm opacity-90 shadow-[0_0_50px_rgba(255,127,80,0.1)]" alt="Fabric Innovation">
+        <div class="container mx-auto px-10 grid lg:grid-cols-2 gap-32 items-center">
+            <div class="relative">
+                <img src="https://sc02.alicdn.com/kf/A5dc770e682ae4976aafcadc3795ed593O.png" class="w-full h-auto opacity-80" alt="Fabric Innovation">
+            </div>
+            <div>
+                <p class="text-gray-500 text-[10px] uppercase tracking-[0.4em] mb-8">The R&D Lab</p>
+                <h2 class="text-6xl mb-12 italic font-light leading-tight text-white/90">The Science of Touch</h2>
+                <p class="text-gray-400 text-xl font-light leading-relaxed mb-12">
+                    Utilizing proprietary textile engineering to deliver buttery-soft comfort without compromising on compression. Every fiber is optimized for durability and performance.
+                </p>
+                <div class="grid grid-cols-2 gap-12 border-t border-gray-800 pt-16">
+                    <div><div class="text-3xl font-light mb-1">95%</div><p class="text-[9px] uppercase tracking-widest text-gray-600">Inquiry Conversion</p></div>
+                    <div><div class="text-3xl font-light mb-1">7 Days</div><p class="text-[9px] uppercase tracking-widest text-gray-600">Rapid Prototyping</p></div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="craft" class="py-40 px-6 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-32">
-                <h2 class="text-6xl mb-6">Elite OEM & ODM Expertise</h2>
-                <p class="text-gray-400 text-[10px] uppercase tracking-[0.4em]">From Fiber to Global Reach</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-20">
-                <div class="text-center group">
-                    <h3 class="text-3xl mb-8 group-hover:italic transition-all">Rapid Prototyping</h3>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Turn concepts into production-ready samples in as little as 7 days, backed by our curated design library.</p>
-                </div>
-                <div class="text-center group">
-                    <h3 class="text-3xl mb-8 group-hover:italic transition-all">Precision Scale</h3>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">State-of-the-art manufacturing facilities capable of high-volume output without compromising boutique quality.</p>
-                </div>
-                <div class="text-center group">
-                    <h3 class="text-3xl mb-8 group-hover:italic transition-all">Quality Assurance</h3>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Multistage rigorous QC process ensuring every piece meets the standards of world-class yoga brands.</p>
-                </div>
-            </div>
-            <div class="mt-40 flex justify-center">
-                <a href="https://hebin.en.alibaba.com" target="_blank" class="bg-black text-white px-20 py-6 text-[10px] uppercase tracking-widest hover:opacity-80 transition duration-500 shadow-xl">Contact Our R&D Team</a>
-            </div>
+    <footer class="py-32 bg-white text-center border-t border-gray-100">
+        <div class="text-2xl font-light tracking-[0.5em] mb-12">HEBIN</div>
+        <p class="text-gray-400 font-light max-w-xl mx-auto mb-16 px-6 italic">"The leading edge of Yoga & Pilates manufacturing excellence."</p>
+        <div class="flex flex-wrap justify-center gap-12 text-[10px] uppercase tracking-widest text-gray-500 mb-20 font-medium">
+            <a href="https://hebin.en.alibaba.com" target="_blank" class="hover:text-black">Alibaba Store</a>
+            <a href="#" class="hover:text-black">LinkedIn</a>
+            <a href="#" class="hover:text-black">Virtual Factory Tour</a>
         </div>
-    </section>
-    <footer class="py-24 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-10 text-center">
-            <div class="text-2xl font-light tracking-[0.4em] mb-12">HEBIN</div>
-            <div class="flex flex-wrap justify-center gap-12 text-[10px] uppercase tracking-widest text-gray-400 mb-16">
-                <a href="https://hebin.en.alibaba.com" target="_blank" class="hover:text-black">Alibaba Wholesale</a>
-                <a href="#" class="hover:text-black">Factory Virtual Tour</a>
-                <a href="#" class="hover:text-black">Compliance & ESG</a>
-                <a href="#" class="hover:text-black">LinkedIn</a>
-            </div>
-            <p class="text-[9px] text-gray-300 tracking-[0.2em] font-light uppercase">&copy; 2026 HEBIN MANUFACTURING GROUP. PRECISION & PERFORMANCE.</p>
-        </div>
+        <div class="h-px w-24 bg-gray-200 mx-auto mb-12"></div>
+        <p class="text-[8px] text-gray-300 tracking-[0.3em] uppercase">© 2026 HEBIN MANUFACTURING GROUP. ALL RIGHTS RESERVED.</p>
     </footer>
 </body>
 </html>
